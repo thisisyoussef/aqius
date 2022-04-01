@@ -1,5 +1,8 @@
+import 'package:aqius/screens/overview/overview_select_screen.dart';
+import 'package:aqius/wide_rounded_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'select_mode_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -69,7 +72,16 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
+              WideRoundedButton(
+                  title: "Get Started",
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SelectModeScreen(),
+                        ));
+                  }),
             ],
           ),
         ),
